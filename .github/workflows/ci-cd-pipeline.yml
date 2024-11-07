@@ -45,7 +45,7 @@ jobs:
         run: |
           echo "$SSH_PRIVATE_KEY" > private_key.pem
           chmod 600 private_key.pem
-          ssh -o StrictHostKeyChecking=no -i private_key.pem ubuntu@3.249.95.14 << 'EOF'
+          ssh -o StrictHostKeyChecking=no -i private_key.pem ubuntu@34.241.137.185 << 'EOF'
             # Pull the latest Docker image
             docker pull ${{ secrets.DOCKER_USERNAME }}/sample-app:latest
             # Stop the existing container if running
